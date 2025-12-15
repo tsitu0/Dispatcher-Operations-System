@@ -1,6 +1,6 @@
 # Logistics Dispatcher Dashboard
 
-Full-stack logistics dashboard with a Next.js frontend and an Express + MongoDB backend. Manage containers, drivers, chassis, and import containers from XLSX in the same format as your sample sheet.
+Full-stack logistics dashboard with a Next.js frontend and an Express + MongoDB backend. Manage containers, drivers, chassis, and import containers from XLSX.
 
 ## Stack
 - Frontend: Next.js (App Router), TypeScript, Tailwind/shadcn UI.
