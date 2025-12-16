@@ -42,7 +42,7 @@ Frontend expects the API at `http://localhost:8080/api` by default.
 - Yards: CRUD plus board grouping for yard containers (loaded vs empty) with yard details shown on each yard card.
 - Auth placeholder: `/api/auth/login` stub; UI uses localStorage session.
 - Mock mode: set `NEXT_PUBLIC_USE_MOCK_DATA=true` to demo UI without backend.
-- Status workflow: containers start in `AT_TERMINAL`, move to `IN_TRANSIT_FROM_TERMINAL`, then `ON_WAY_TO_CUSTOMER` or `ON_WAY_TO_YARD`, through `AT_CUSTOMER_YARD` / `YARDS` (loaded/empty), `EMPTY_AT_CUSTOMER`, `RETURNING_TO_TERMINAL`, and `RETURNED`. Transit Board lets you select a container and move it between stages (no drag-drop).
+- Status workflow: containers start in `AT_TERMINAL`, move to `IN_TRANSIT_FROM_TERMINAL`, then `ON_WAY_TO_CUSTOMER` or `ON_WAY_TO_YARD`, through `AT_CUSTOMER_YARD` / `YARDS` (loaded/empty), `EMPTY_AT_CUSTOMER`, `RETURNING_TO_TERMINAL`, and `RETURNED`. Transit Board lets you select a container and move it between stages.
 
 ## API (summary)
 - Health: `GET /api/health`
