@@ -36,13 +36,13 @@ cd client && npm run dev
 Frontend expects the API at `http://localhost:8080/api` by default.
 
 ## Features
-- Containers: create/edit/delete, optional Container #, required Case Number, assignment to driver/chassis.
-- XLSX import: `POST /api/containers/import` with `file` field; preserves sheet row order via `orderIndex` and upserts by `caseNumber`.
+- Containers: create/edit/delete (API), optional Container #, required Case Number, assignment to driver/chassis. Dashboard lists terminal containers; Transit Board manages the rest.
+- XLSX import: `POST /api/containers/import` with `file` field; preserves sheet row order via `orderIndex` and upserts by `caseNumber` (trigger import from the dashboard).
 - Drivers & Chassis: simple CRUD.
-- Yards: CRUD plus board grouping for “Other Yard” containers (loaded vs empty).
+- Yards: CRUD plus board grouping for yard containers (loaded vs empty) with yard details shown on each yard card.
 - Auth placeholder: `/api/auth/login` stub; UI uses localStorage session.
 - Mock mode: set `NEXT_PUBLIC_USE_MOCK_DATA=true` to demo UI without backend.
-- Status workflow: containers start in `AT_TERMINAL`, can be sent to `IN_TRANSIT_FROM_TERMINAL` (instead of delete) and managed on a drag-and-drop board through `AT_CUSTOMER_YARD`, `AT_OTHER_YARD`, `EMPTY_AT_CUSTOMER`, and `RETURNING_TO_TERMINAL`.
+- Status workflow: containers start in `AT_TERMINAL`, move to `IN_TRANSIT_FROM_TERMINAL`, then `ON_WAY_TO_CUSTOMER` or `ON_WAY_TO_YARD`, through `AT_CUSTOMER_YARD` / `YARDS` (loaded/empty), `EMPTY_AT_CUSTOMER`, `RETURNING_TO_TERMINAL`, and `RETURNED`. Transit Board lets you select a container and move it between stages (no drag-drop).
 
 ## API (summary)
 - Health: `GET /api/health`

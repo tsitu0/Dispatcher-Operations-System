@@ -1292,10 +1292,6 @@
     min-width: var(--radix-select-trigger-width);
   }
 
-  .min-w-max {
-    min-width: max-content;
-  }
-
   .flex-1 {
     flex: 1;
   }
@@ -3173,18 +3169,6 @@
   @media (hover: hover) {
     .hover\:text-muted-foreground:hover {
       color: var(--muted-foreground);
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:text-primary\/80:hover {
-      color: var(--primary);
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:text-primary\/80:hover {
-        color: color-mix(in oklab, var(--primary) 80%, transparent);
-      }
     }
   }
 
